@@ -23,7 +23,7 @@ const AllServicesCard = ({ service }) => {
           </p>
         </div>
         <div className="">
-          <Link to={`/checkout/${_id}`}>
+          <Link to={`/serviceDetails/${_id}`}>
             <button className="btn bg-yellow-600 border-none w-full ">
               View details
             </button>

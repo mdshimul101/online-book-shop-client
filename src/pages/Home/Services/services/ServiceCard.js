@@ -6,7 +6,7 @@ const ServiceCard = ({ service }) => {
   return (
     <div className="card card-compact bg-base-100 shadow-xl marker:w-full">
       <figure>
-        <img src={img} alt="Shoes" className="w-full " />
+        <img src={img} alt="" className="w-full " />
       </figure>
       <div className="card-body">
         <h2 className="text-2xl text-center">{name}</h2>
@@ -23,7 +23,7 @@ const ServiceCard = ({ service }) => {
           </p>
         </div>
         <div className="">
-          <Link to={`/checkout/${_id}`}>
+          <Link to={`/serviceDetails/${_id}`}>
             <button className="btn bg-yellow-600 border-none w-full ">
               View details
             </button>
