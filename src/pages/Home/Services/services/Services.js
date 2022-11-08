@@ -7,7 +7,7 @@ import ServiceCard from "./ServiceCard";
 const Services = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
-    fetch("services.json")
+    fetch("http://localhost:5000/books")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
@@ -22,7 +22,7 @@ const Services = () => {
         ))}
       </div>
       <div className="pb-5">
-        <Link to={``}>
+        <Link to="/allServices">
           <button className="btn bg-yellow-600 border-none w-28 ">
             See all
           </button>
