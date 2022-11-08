@@ -1,0 +1,74 @@
+[
+    {
+      "_id": "1",
+      "name": "Hamlet",
+      "img": "https://i.ibb.co/wKj3fwt/hamlet-271.jpg",
+      "description":"Hamlet is the story of the Prince of Denmark who learns of the death of his father at the hands of his uncle, Claudius. Claudius murders Hamlet's father, his own brother, to take the throne of Denmark and to marry Hamlet's widowed mother. Hamlet is sunk into a state of great despair as a result of discovering the murder of his father and the infidelity of his mother. Hamlet is torn between his great sadness and his desire for the revenge of his father's murder.",
+      "writer": "William Shakespeare" ,
+      "ratings": 4.8 ,
+      "reviews": 2.3,
+      "price": 320,
+      "discount":20
+
+    },
+    {
+        "_id": "2",
+        "name": "Emma",
+        "img": "https://i.ibb.co/prvYC35/emma-9781787556997-hr.jpg",
+        "description": "Jane Austen has great fun with this novel, teasing at the social mores of her time, where the hunting of a suitable partner is an all-consuming game. Emma Woodhouse is a confident, elitist young woman, whose self-belief leads to a series of romantic misunderstandings as she makes and breaks engagements for her companion Harriet Smith. Emma assumes that Elton desires to marry Harriet, but actually Elton really wants Emma. Frank Churchill too tries to win her, but Emma falls for Mr. Knightley, whom everyone thinks is in love Jane Fairfax. In the end, everything all is mended, as Emma and Mr. Knightley finally get engaged, and Harriet and Robert Martin are brought back together again.",
+        "writer":"Jane Austen",
+        "ratings": 4.6 ,
+        "reviews": 52,
+        "price": 600,
+        "discount":50
+      },
+      {
+        "_id": "3",
+        "name": "Romeo and Juliet",
+        "img": "https://i.ibb.co/kGrjTg5/il-570x-N-498843445-28tf.jpg",
+        "description": "Romeo and Juliet, play by William Shakespeare, written about 1594–96 and first published in an unauthorized quarto in 1597. An authorized quarto appeared in 1599, substantially longer and more reliable. A third quarto, based on the second, was used by the editors of the First Folio of 1623. The characters of Romeo and Juliet have been depicted in literature, music, dance, and theatre. The appeal of the young hero and heroine—whose families, the Montagues and the Capulets, respectively, are implacable enemies—is such that they have become, in the popular imagination, the representative type of star-crossed lovers.",
+        "writer":"William Shakespeare",
+        "ratings": 4.4 ,
+        "reviews": 2.1,
+        "price": 450,
+        "discount":15
+      },
+      {
+        "_id": "4",
+        "name": "Mrs. Dalloway",
+        "img": "https://i.ibb.co/syLPpJP/914gn-FWY3-GL.jpg",
+        "description":"Mrs. Dalloway, novel by Virginia Woolf published in 1925. It examines one day in the life of Clarissa Dalloway, an upper-class Londoner married to a member of Parliament. Mrs. Dalloway is essentially plotless; what action there is takes place mainly in the characters’ consciousness. The novel addresses the nature of time in personal experience through multiple interwoven stories, particularly that of Clarissa as she prepares for and hosts a party and that of the mentally damaged war veteran Septimus Warren Smith. The two characters can be seen as foils for each",
+        "writer":"Virginia Woolf",
+        "ratings": 4.0 ,
+        "reviews": 1.2,
+        "price": 350,
+        "discount":10
+      },
+      
+      
+      {
+        "_id": "5",
+        "name": "A Brief History of Time",
+        "img": "https://i.ibb.co/DGPpPZC/0e4a3b402a182777a4b3420efbf64be3.jpg",
+        "description":"In the ten years since its publication in 1988, Stephen Hawking's classic work has become a landmark volume in scientific writing, with more than nine million copies in forty languages sold worldwide. That edition was on the cutting edge of what was then known about the origins and nature of the universe. But the intervening years have seen extraordinary advances in the technology of observing both the micro- and the macrocosmic worlds.",
+        "writer":"Stephen Hawking",
+        "ratings": 4.4 ,
+        "reviews": 18,
+        "Duration": 250,
+        "price": 200,
+        "discount":30
+
+      },
+      {
+        "_id": "6",
+        "name": "The Fellowship of the Ring",
+        "img": "https://i.ibb.co/k5RS50j/12356699.jpg",
+        "description":"This Specialization explores several aspects of the new digital marketing environment, including topics such as digital marketing analytics, search engine optimization, social media marketing, and 3D Printing. When you complete the Digital Marketing Specialization you will have a richer understanding of the foundations of the new digital marketing landscape and acquire a new set of stories, concepts, and tools to help you digitally create, distribute, promote and price products and services.",
+        "writer":"J. R. R. Tolkien",
+        "ratings": 4.4 ,
+        "reviews": 1.7,
+        "price": 250,
+        "discount":23
+      }
+
+]

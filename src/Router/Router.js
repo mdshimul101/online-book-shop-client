@@ -1,4 +1,4 @@
-import Home from "../pages/Home/Home";
+import Home from "../pages/Home/Home/Home";
 import Login from "../pages/Login/Login";
 
 const { createBrowserRouter } = require("react-router-dom");
