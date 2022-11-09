@@ -14,12 +14,14 @@ const AllServices = () => {
         <p className="text-2xl font-bold text-orange-600">Books</p>
       </div>
       <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-24">
-        {services.map((service) => (
-          <AllServicesCard
-            key={service._id}
-            service={service}
-          ></AllServicesCard>
-        ))}
+        {services
+          .sort((a, b) => (a.time > b.time ? -1 : 1))
+          .map((service) => (
+            <AllServicesCard
+              key={service._id}
+              service={service}
+            ></AllServicesCard>
+          ))}
       </div>
     </div>
   );

@@ -21,6 +21,9 @@ const Header = () => {
       <div className="flex-none">
         <div className="	list-none  flex  lg:flex-row text-left">
           <li className="font-semibold mr-4">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="font-semibold mr-4">
             <Link to="/blog">Blog</Link>
           </li>
           {user?.email ? (

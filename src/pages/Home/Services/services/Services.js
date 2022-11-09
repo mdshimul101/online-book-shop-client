@@ -17,9 +17,11 @@ const Services = () => {
         <p className="text-2xl font-bold text-orange-600">Books</p>
       </div>
       <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-24">
-        {services.map((service) => (
-          <ServiceCard key={service._id} service={service}></ServiceCard>
-        ))}
+        {services
+          .sort((a, b) => (a.time > b.time ? -1 : 1))
+          .map((service) => (
+            <ServiceCard key={service._id} service={service}></ServiceCard>
+          ))}
       </div>
       <div className="pb-5">
         <Link to="/allServices">
