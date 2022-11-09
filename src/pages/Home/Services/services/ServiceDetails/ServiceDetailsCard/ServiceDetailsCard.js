@@ -19,10 +19,12 @@ const ServiceDetailsCard = ({ props }) => {
       </figure>
       <div className="card-body">
         <h2 className="text-2xl text-center">{name}</h2>
-        <p className="text-left">{description}</p>
-        <p className="text-left text-base">Writer : {writer}</p>
+        <p className="text-left text-base">{description}</p>
+        <p className="text-left text-base text-gray-900 font-semibold">
+          Writer : {writer}
+        </p>
 
-        <div className="flex flex-col lg:flex-row">
+        <div className="flex flex-col lg:flex-row ">
           <p className="text-xl text-orange-600 font-semibold my-3">
             Ratings: {ratings}K
           </p>

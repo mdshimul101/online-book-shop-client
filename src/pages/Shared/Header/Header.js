@@ -21,12 +21,12 @@ const Header = () => {
       <div className="flex-none">
         <ul className="menu menu-horizontal p-0">
           <li className="font-semibold">
-            <Link>Blog</Link>
+            <Link to="/blog">Blog</Link>
           </li>
           {user?.email ? (
             <>
               <li className="font-semibold">
-                <Link>My Review</Link>
+                <Link to="/myReview">My Review</Link>
               </li>
               <li className="font-semibold">
                 <Link>Add Service</Link>

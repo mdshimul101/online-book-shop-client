@@ -49,6 +49,8 @@ const ServiceDetails = () => {
     const rating = form.rating.value;
     const photoURL = form.photoURL.value;
     const message = form.message.value;
+    const d = new Date();
+    var time = d.getTime();
 
     const order = {
       service: _id,
@@ -59,15 +61,9 @@ const ServiceDetails = () => {
       photoURL,
       message,
       rating,
+      time,
     };
     console.log(email, name, message, rating, price);
-
-    // if(phone.length > 10){
-    //     alert('Phone number should be 10 characters or longer')
-    // }
-    // else{
-
-    // }
 
     fetch("http://localhost:5000/allReviews", {
       method: "POST",
@@ -81,7 +77,7 @@ const ServiceDetails = () => {
         console.log(data);
 
         if (data.acknowledged) {
-          alert("Order placed successfully");
+          alert("Add review successfully");
           form.reset();
         }
       })
