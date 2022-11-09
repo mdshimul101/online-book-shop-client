@@ -64,6 +64,40 @@
         "reviews": 1.7,
         "price": 250,
         "discount":23
-      }
+      },
+      [
+  {
+        
+        "name": "A Passage to India",
+        "img": "https://i.ibb.co/NLGVMsr/A-passage-to-India.jpg",
+        "description":"A Passage to India is a 1924 novel by English author E. M. Forster set against the backdrop of the British Raj and the Indian independence movement in the 1920s.",
+        "writer":"E. M. Forster",
+        "ratings": 4.4 ,
+        "price": 220
+       
+  },
+  {
+        
+        "name": "Lolita",
+        "img": "https://i.ibb.co/6yqfgsG/3486989.jpg",
+        "description":"Lolita is a 1955 novel written by Russian-American novelist Vladimir Nabokov. The novel is notable for its controversial subject: the protagonist and unreliable narrator, a middle-aged literature.",
+        "writer":"Vladimir Nabokov",
+        "ratings": 4.2 ,
+        "price": 200
+       
+  },
+  {
+        
+        "name": "Little Women",
+        "img": "https://i.ibb.co/ww7nm5g/little-women-cover-small.jpg",
+        "description":"Little Women is a coming-of-age novel written by American novelist Louisa May Alcott. Originally published in two volumes in 1868 and 1869, Alcott wrote the book over several months, at the request of her publisher.",
+        "writer":"Louisa May Alcott",
+        "ratings": 4.8 ,
+        "price": 280
+       
+  }
+]
 
 ]
+
+
