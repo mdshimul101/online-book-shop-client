@@ -9,7 +9,7 @@ const Header = () => {
     logOut().then().catch();
   };
   return (
-    <div className="navbar bg-gray-200">
+    <div className="navbar bg-gray-200 flex-col lg:flex-row">
       <div className="flex-1">
         <Link
           to="/"
@@ -19,33 +19,33 @@ const Header = () => {
         </Link>
       </div>
       <div className="flex-none">
-        <ul className="menu menu-horizontal p-0">
-          <li className="font-semibold">
+        <div className="	list-none  flex  lg:flex-row text-left">
+          <li className="font-semibold mr-4">
             <Link to="/blog">Blog</Link>
           </li>
           {user?.email ? (
             <>
-              <li className="font-semibold">
+              <li className="font-semibold mr-4">
                 <Link to="/myReview">My Review</Link>
               </li>
-              <li className="font-semibold">
+              <li className="font-semibold mr-4">
                 <Link to="/addService">Add Service</Link>
               </li>
-              <li className="font-semibold">
+              <li className="font-semibold mr-4">
                 <Link onClick={handleLogOut}>Logout</Link>
               </li>
             </>
           ) : (
             <>
-              <li className="font-semibold">
+              <li className="font-semibold mr-4">
                 <Link to="/login">Login</Link>
               </li>
-              <li className="font-semibold">
+              <li className="font-semibold mr-2">
                 <Link to="/signup">Sign Up</Link>
               </li>
             </>
           )}
-        </ul>
+        </div>
       </div>
     </div>
   );
