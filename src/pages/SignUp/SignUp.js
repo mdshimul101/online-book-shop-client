@@ -1,26 +1,41 @@
-import React, { useContext } from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import React, { useContext, useRef, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import useTitle from "../../hooks/useTitle";
 import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
 const SignUp = () => {
   useTitle("Sign Up");
-  const { createUser } = useContext(AuthContext);
+  const { createUser, updateUserProfile } = useContext(AuthContext);
+
   const navigate = useNavigate();
 
   const handleSignUp = (event) => {
     event.preventDefault();
     const form = event.target;
+    const name = form.name.value;
     const email = form.email.value;
+    const photoURL = form.photoURL.value;
     const password = form.password.value;
 
     createUser(email, password)
       .then((result) => {
         const user = result.user;
         console.log(user);
+        handleUpdateUserProfile(name, photoURL);
         form.reset("");
         navigate("/");
       })
       .catch((err) => console.error(err));
+  };
+
+  const handleUpdateUserProfile = (name, photoURL) => {
+    const profile = {
+      displayName: name,
+      photoURL: photoURL,
+    };
+
+    updateUserProfile(profile)
+      .then(() => {})
+      .catch((error) => console.error(error));
   };
 
   return (
@@ -41,7 +56,7 @@ const SignUp = () => {
           <div className="form-control">
             <input
               type="text"
-              name="image"
+              name="photoURL"
               placeholder="Photo URL"
               className="input input-bordered"
             />

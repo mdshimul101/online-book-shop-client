@@ -7,6 +7,7 @@ import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
 
 const Login = () => {
   useTitle("Login");
+
   const { providerLogin, login } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
@@ -20,6 +21,7 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+
         navigate(from, { replace: true });
       })
       .catch((error) => console.log(error));
@@ -71,6 +73,7 @@ const Login = () => {
             />
           </div>
         </form>
+
         <div className="flex justify-center  mb-8">
           <button
             onClick={handleGoogleSignIn}
