@@ -1,11 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, useLoaderData, useLocation } from "react-router-dom";
 import { AuthContext } from "../../../../../contexts/AuthProvider/AuthProvider";
 import Reviews from "./Reviews/Reviews";
 import ServiceDetailsCard from "./ServiceDetailsCard/ServiceDetailsCard";
 
 const ServiceDetails = () => {
+  const location = useLocation();
   const { user } = useContext(AuthContext);
+
   const [reviewsData, setReviewsData] = useState([]);
 
   const {
@@ -43,6 +45,7 @@ const ServiceDetails = () => {
 
   const handlePlaceOrder = (event) => {
     event.preventDefault();
+
     const form = event.target;
     const displayName = form.name.value;
     const email = user?.email || "unregistered";
@@ -90,12 +93,14 @@ const ServiceDetails = () => {
         <ServiceDetailsCard props={service}></ServiceDetailsCard>
       </div>
       <div>
-        <p className="text-blue-500 font-semibold text-2xl">
+        <p className="text-blue-500 font-semibold text-2xl my-5">
           Total Review : {reviewsData.length}
         </p>
-        {reviewsData.map((review) => (
-          <Reviews key={review._id} review={review}></Reviews>
-        ))}
+        {reviewsData
+          .sort((a, b) => (a.time > b.time ? -1 : 1))
+          .map((review) => (
+            <Reviews key={review._id} review={review}></Reviews>
+          ))}
       </div>
 
       {user?.uid ? (
@@ -157,7 +162,12 @@ const ServiceDetails = () => {
         <>
           <div className="text-xl py-4">
             Please
-            <Link to="/login" className="text-blue-500 font-semibold ml-2">
+            <Link
+              to="/login"
+              state={{ from: location }}
+              replace
+              className="text-blue-500 font-semibold ml-2"
+            >
               Login
             </Link>{" "}
             for added a review{" "}

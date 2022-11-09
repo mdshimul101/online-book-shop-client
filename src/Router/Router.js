@@ -1,3 +1,4 @@
+import AddService from "../pages/AddService/AddService";
 import Blog from "../pages/Blog/Blog";
 import Home from "../pages/Home/Home/Home";
 import AllServices from "../pages/Home/Services/services/allServices/AllServices";
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
             <MyReview></MyReview>
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/addService",
+        element: <AddService></AddService>,
       },
       {
         path: "/login",

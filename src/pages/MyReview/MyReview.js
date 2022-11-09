@@ -26,12 +26,14 @@ const MyReview = () => {
           <>
             <div className="w-10/12 mx-auto">
               <div>
-                <p className="text-2xl text-blue-500 py-2 font-bold">
+                <p className="text-2xl text-blue-500  my-5 font-bold">
                   Total Reviews: {review.length}
                 </p>
-                {review.map((rvw) => (
-                  <AllMyReview key={rvw._id} review={rvw}></AllMyReview>
-                ))}
+                {review
+                  .sort((a, b) => (a.time > b.time ? -1 : 1))
+                  .map((rvw) => (
+                    <AllMyReview key={rvw._id} review={rvw}></AllMyReview>
+                  ))}
               </div>
             </div>
           </>
