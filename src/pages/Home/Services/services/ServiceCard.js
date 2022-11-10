@@ -10,11 +10,11 @@ const ServiceCard = ({ service }) => {
       <PhotoProvider>
         <PhotoView src={img}>
           <figure>
-            <img className="w-full " src={img} alt="Course" />
+            <img className="w-full" src={img} alt="Course" />
           </figure>
         </PhotoView>
       </PhotoProvider>
-      <div className="card-body">
+      <div className="card-body  h-72">
         <h2 className="text-2xl text-center">{name}</h2>
         <p className="text-left">{description.slice(0, 100)}...</p>
         <p className="text-xl text-orange-600 font-semibold ">

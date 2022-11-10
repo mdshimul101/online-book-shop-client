@@ -136,6 +136,7 @@ const ServiceDetails = () => {
                   defaultValue={user?.photoURL}
                   className="input input-ghost w-full  input-bordered"
                   required
+                  readOnly
                 />
                 <input
                   name="email"
