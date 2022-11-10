@@ -5,16 +5,25 @@ import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
 import AllMyReview from "./AllMyReview/AllMyReview";
 
 const MyReview = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
   const [reviews, setReview] = useState([]);
 
   const url = `http://localhost:5000/allReviews?email=${user?.email}`;
 
   useEffect(() => {
-    fetch(url)
-      .then((res) => res.json())
+    fetch(url, {
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("bookshop-token")}`,
+      },
+    })
+      .then((res) => {
+        if (res.status === 401 || res.status === 403) {
+          return logOut();
+        }
+        return res.json();
+      })
       .then((data) => {
-        console.log(data);
+        //console.log(data);
         setReview(data);
       });
   }, [user?.email]);

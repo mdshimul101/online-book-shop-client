@@ -1,3 +1,33 @@
+# Project Name:
+
+- Book Shop
+
+# Live Link:
+
+- Live Demo:
+
+# Project Description
+
+## Technologies:
+
+- Firebase Authentication
+- ReactJs
+- Nodejs
+- MongoDB(CRUD Operation)
+- JWT Token
+- Express js
+- Tailwind CSS
+- Daisy UI
+- JS
+
+## Features:
+
+- Responsive Design
+- Firebase Authentication System.
+- User can Login or Register in this site easily.
+- Book Shop is online-based learning website.
+- User can give their review for any book.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
