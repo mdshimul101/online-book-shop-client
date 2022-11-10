@@ -17,7 +17,7 @@ const AllMyReview = ({ reviews, handleDelete, handleStatusUpdate }) => {
   return (
     <div className="py-4">
       <div className="border  p-3">
-        <div className="border p-2 lg:p-3 w-full flex flex-col lg:flex-row">
+        <div className=" border-none lg:border p-2 lg:p-3 w-full flex flex-col lg:flex-row">
           <div className="w-full lg:w-3/12 p-2 lg:p-0 lg:m-0 border lg:border-none">
             <div className="flex items-center space-x-3">
               <div className="avatar">
@@ -39,11 +39,15 @@ const AllMyReview = ({ reviews, handleDelete, handleStatusUpdate }) => {
               <p>{message}</p>
             </div>
           </div>
-          <div className="mx-5 w-1/12">
-            <p className="text-yellow-500 font-semibold">Book Name</p>
-            <p>{serviceName}</p>
+          <div className="w-full lg:w-4/12 p-2 lg:p-0  lg:m-0 border lg:border-none text-left">
+            <div>
+              <p className="text-yellow-500 font-semibold">Book Name</p>
+            </div>
+            <div>
+              <p>{serviceName}</p>
+            </div>
           </div>
-          <div className="w-full lg:w-2/12 p-2 lg:p-0  lg:m-0 border lg:border-none text-left ml-8">
+          <div className="w-full lg:w-2/12 p-2 lg:p-0  lg:m-0 border lg:border-none text-left ml-0 lg:ml-8">
             <div>
               <p className="text-yellow-500 font-semibold">Rating</p>
             </div>
