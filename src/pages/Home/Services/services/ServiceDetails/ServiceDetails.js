@@ -163,7 +163,7 @@ const ServiceDetails = () => {
         </>
       ) : (
         <>
-          <div className="text-xl py-4">
+          <div className="text-xl py-10 text-center ">
             Please
             <Link
               to="/login"
