@@ -2,7 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const AllMyReview = ({ reviews, handleDelete, handleStatusUpdate }) => {
-  const { _id, customer, message, photoURL, rating, email, status } = reviews;
+  const {
+    _id,
+    serviceName,
+    customer,
+    message,
+    photoURL,
+    rating,
+    email,
+    status,
+  } = reviews;
   //console.log(reviews);
 
   return (
@@ -22,13 +31,17 @@ const AllMyReview = ({ reviews, handleDelete, handleStatusUpdate }) => {
               </div>
             </div>
           </div>
-          <div className="w-full lg:w-5/12 p-2 lg:p-0  lg:m-0 border lg:border-none text-left">
+          <div className="w-full lg:w-4/12 p-2 lg:p-0  lg:m-0 border lg:border-none text-left">
             <div>
               <p className="text-yellow-500 font-semibold">Review</p>
             </div>
             <div>
               <p>{message}</p>
             </div>
+          </div>
+          <div className="mx-5 w-1/12">
+            <p className="text-yellow-500 font-semibold">Book Name</p>
+            <p>{serviceName}</p>
           </div>
           <div className="w-full lg:w-2/12 p-2 lg:p-0  lg:m-0 border lg:border-none text-left ml-8">
             <div>
