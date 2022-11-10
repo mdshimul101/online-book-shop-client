@@ -3,7 +3,7 @@ import { PhotoProvider, PhotoView } from "react-photo-view";
 import { Link } from "react-router-dom";
 
 const NewBooksCard = ({ book }) => {
-  const { _id, img, price, name, description, ratings } = book;
+  const { img, price, name, description, ratings } = book;
   return (
     <div>
       <div className="card card-compact bg-base-100 shadow-xl marker:w-full">

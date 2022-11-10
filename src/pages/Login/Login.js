@@ -20,7 +20,7 @@ const Login = () => {
     providerLogin(googleProvider)
       .then((result) => {
         const user = result.user;
-        console.log(user);
+        // console.log(user);
 
         navigate(from, { replace: true });
       })
@@ -40,7 +40,7 @@ const Login = () => {
           email: user.email,
         };
 
-        console.log(currentUser);
+        //console.log(currentUser);
         //console.log(user);
 
         // get jwt token
@@ -53,8 +53,6 @@ const Login = () => {
         })
           .then((res) => res.json())
           .then((data) => {
-            console.log(data);
-            // local storage is the easiest but not the best place to store jwt token
             localStorage.setItem("bookshop-token", data.token);
             navigate(from, { replace: true });
           });

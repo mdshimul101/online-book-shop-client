@@ -24,7 +24,7 @@ const SignUp = () => {
         form.reset("");
         navigate("/");
       })
-      .catch((err) => console.error(err));
+      .catch((err) => console.log(err));
   };
 
   const handleUpdateUserProfile = (name, photoURL) => {
@@ -79,10 +79,12 @@ const SignUp = () => {
               required
             />
           </div>
+
           <div className="form-control mt-6">
             <input className="btn btn-primary" type="submit" value="Sign Up" />
           </div>
         </form>
+
         <p className="text-center">
           Already have an account?{" "}
           <Link className="text-orange-600 font-bold" to="/login">

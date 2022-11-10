@@ -12,7 +12,6 @@ const AllMyReview = ({ reviews, handleDelete, handleStatusUpdate }) => {
     email,
     status,
   } = reviews;
-  //console.log(reviews);
 
   return (
     <div className="py-4">

@@ -30,7 +30,7 @@ const MyReview = () => {
 
   const handleDelete = (id) => {
     const proceed = window.confirm(
-      "Are you sure, you want to cancel this order"
+      "Are you sure, you want to cancel this review"
     );
     if (proceed) {
       fetch(`https://online-book-shop-server.vercel.app/allReviews/${id}`, {
