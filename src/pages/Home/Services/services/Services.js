@@ -16,16 +16,16 @@ const Services = () => {
       <div className="text-center my-14">
         <p className="text-2xl font-bold text-orange-600">Books</p>
       </div>
-      <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-24">
+      <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-14">
         {services
           .sort((a, b) => (a.time > b.time ? -1 : 1))
           .map((service) => (
             <ServiceCard key={service._id} service={service}></ServiceCard>
           ))}
       </div>
-      <div className="pb-5">
+      <div className="pb-10 text-center">
         <Link to="/allServices">
-          <button className="btn bg-yellow-600 border-none w-28 ">
+          <button className="btn bg-yellow-500 border-none w-28 ">
             See all
           </button>
         </Link>

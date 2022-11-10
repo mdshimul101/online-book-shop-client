@@ -29,7 +29,7 @@ const NewBooksCard = ({ book }) => {
             </p>
           </div>
           <div className="">
-            <Link to={`/serviceDetails/${_id}`}>
+            <Link>
               <button className="btn bg-yellow-600 border-none w-full ">
                 Buy Now
               </button>

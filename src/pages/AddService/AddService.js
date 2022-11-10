@@ -58,6 +58,7 @@ const AddService = () => {
       })
       .catch((er) => console.error(er));
   };
+
   return (
     <div className="w-10/12 mx-auto">
       <div className="my-14 border p-2">

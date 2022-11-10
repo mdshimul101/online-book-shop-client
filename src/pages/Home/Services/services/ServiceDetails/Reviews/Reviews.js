@@ -37,55 +37,6 @@ const Reviews = ({ review }) => {
           </div>
         </div>
       </div>
-
-      {/* <div className=" w-full border p-4">
-        <table className="table w-full ">
-          <thead className="flex justify-center">
-            <tr>
-              <th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
-              </th>
-              <th>Name</th>
-              <th>Review</th>
-
-              <th>Rating</th>
-            </tr>
-          </thead>
-          <div className=" flex justify-between basis-1/3">
-            <div className="">
-              <div className="flex items-center space-x-3">
-                <div className="avatar">
-                  <div className="mask mask-squircle w-12 h-12">
-                    <img src={photoURL} alt="No img" />
-                  </div>
-                </div>
-                <div>
-                  <div className="font-bold">{customer}</div>
-                  <div className="text-sm opacity-50">{email}</div>
-                </div>
-              </div>
-            </div>
-            <div className="text-left">
-              <div>
-                <p>Review</p>
-              </div>
-              <div>
-                <p>{message}</p>
-              </div>
-            </div>
-            <div>
-              <div>
-                <p>Rating</p>
-              </div>
-              <div>
-                <p>{rating}</p>
-              </div>
-            </div>
-          </div>
-        </table>
-      </div> */}
     </div>
   );
 };

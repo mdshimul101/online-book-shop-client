@@ -1,7 +1,7 @@
 import React from "react";
 
-const AllMyReview = ({ review }) => {
-  const { customer, message, photoURL, rating, email } = review;
+const AllMyReview = ({ reviews, handleDelete }) => {
+  const { _id, customer, message, photoURL, rating, email } = reviews;
   return (
     <div className="py-4">
       <div className="border  p-3">
@@ -37,7 +37,9 @@ const AllMyReview = ({ review }) => {
           </div>
           <div className="flex my-2">
             <button className="btn mr-2 ml-1 lg:ml-0">Update</button>
-            <button className="btn">Delete</button>
+            <button onClick={() => handleDelete(_id)} className="btn">
+              Delete
+            </button>
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@ import useTitle from "../../../hooks/useTitle";
 import Banner from "../Banner";
 import NewBooks from "../NewBooks/NewBooks";
 import Services from "../Services/services/Services";
+import About from "./About/About";
 
 const Home = () => {
   useTitle("Home");
@@ -11,16 +12,7 @@ const Home = () => {
       <Banner></Banner>
       <Services></Services>
       <NewBooks></NewBooks>
-
-      <div>
-        <div className="text-left">
-          <h1>Discover something new to read</h1>
-          <h3>
-            Book recommendations from real people, not robots. Uncover future
-            bestsellers by voting for your favorites.
-          </h3>
-        </div>
-      </div>
+      <About></About>
     </div>
   );
 };

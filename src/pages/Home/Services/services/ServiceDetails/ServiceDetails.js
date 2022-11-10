@@ -43,7 +43,7 @@ const ServiceDetails = () => {
       });
   }, []);
 
-  const handlePlaceOrder = (event) => {
+  const handleAddReview = (event) => {
     event.preventDefault();
 
     const form = event.target;
@@ -81,6 +81,9 @@ const ServiceDetails = () => {
 
         if (data.acknowledged) {
           alert("Add review successfully");
+          const remaining = reviewsData.filter((rvw) => rvw._id !== _id);
+          const newReviewData = [...reviewsData, remaining];
+          setReviewsData(newReviewData);
           form.reset();
         }
       })
@@ -93,7 +96,7 @@ const ServiceDetails = () => {
         <ServiceDetailsCard props={service}></ServiceDetailsCard>
       </div>
       <div>
-        <p className="text-blue-500 font-semibold text-2xl my-5">
+        <p className="text-blue-400 font-bold text-3xl text-center my-5">
           Total Review : {reviewsData.length}
         </p>
         {reviewsData
@@ -110,7 +113,7 @@ const ServiceDetails = () => {
             <h2 className="text-2xl py-6 text-yellow-500 font-semibold">
               Add Your Review
             </h2>
-            <form onSubmit={handlePlaceOrder}>
+            <form onSubmit={handleAddReview}>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 <input
                   name="name"

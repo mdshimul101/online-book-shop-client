@@ -9,8 +9,13 @@ const PrivateRoute = ({ children }) => {
 
   if (loading) {
     return (
-      <div className="radial-progress text-light" style={{ "--value": 70 }}>
-        70%
+      <div className="my-5">
+        <div
+          className="radial-progress text-light flex justify-center text-center  mx-auto"
+          style={{ "--value": 70 }}
+        >
+          <p className="mt-5">70%</p>
+        </div>
       </div>
     );
   }

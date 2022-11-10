@@ -1,11 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
+
 import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
 
 import AllMyReview from "./AllMyReview/AllMyReview";
 
 const MyReview = () => {
   const { user } = useContext(AuthContext);
-  const [review, setReview] = useState([]);
+  const [reviews, setReview] = useState([]);
 
   const url = `http://localhost:5000/allReviews?email=${user?.email}`;
 
@@ -17,22 +18,49 @@ const MyReview = () => {
         setReview(data);
       });
   }, [user?.email]);
+
+  const handleDelete = (id) => {
+    const proceed = window.confirm(
+      "Are you sure, you want to cancel this order"
+    );
+    if (proceed) {
+      fetch(`http://localhost:5000/allReviews/${id}`, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          if (data.deletedCount > 0) {
+            alert("deleted successfully");
+
+            const remaining = reviews.filter((odr) => odr._id !== id);
+            setReview(remaining);
+          }
+        });
+    }
+  };
   return (
     <div>
       <div className="">
-        {review.length < 1 ? (
-          <p>"There is No Review"</p>
+        {reviews.length < 1 ? (
+          <p className="text-2xl text-blue-400 text-center  my-5 font-bold">
+            "There is No Review"
+          </p>
         ) : (
           <>
             <div className="w-10/12 mx-auto">
               <div>
-                <p className="text-2xl text-blue-500  my-5 font-bold">
-                  Total Reviews: {review.length}
+                <p className="text-2xl text-blue-400 text-center  my-5 font-bold">
+                  Total Reviews: {reviews.length}
                 </p>
-                {review
+                {reviews
                   .sort((a, b) => (a.time > b.time ? -1 : 1))
                   .map((rvw) => (
-                    <AllMyReview key={rvw._id} review={rvw}></AllMyReview>
+                    <AllMyReview
+                      key={rvw._id}
+                      reviews={rvw}
+                      handleDelete={handleDelete}
+                    ></AllMyReview>
                   ))}
               </div>
             </div>
