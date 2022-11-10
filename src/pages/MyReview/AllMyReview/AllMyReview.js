@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-const AllMyReview = ({ reviews, handleDelete }) => {
-  const { _id, customer, message, photoURL, rating, email } = reviews;
+const AllMyReview = ({ reviews, handleDelete, handleStatusUpdate }) => {
+  const { _id, customer, message, photoURL, rating, email, status } = reviews;
+  //console.log(reviews);
+
   return (
     <div className="py-4">
       <div className="border  p-3">
@@ -36,7 +39,14 @@ const AllMyReview = ({ reviews, handleDelete }) => {
             </div>
           </div>
           <div className="flex my-2">
-            <button className="btn mr-2 ml-1 lg:ml-0">Update</button>
+            <Link to="/updateMyReview">
+              <button
+                onClick={() => handleStatusUpdate(_id)}
+                className="btn mr-2 ml-1 lg:ml-0"
+              >
+                {status ? status : "Edit"}
+              </button>
+            </Link>
             <button onClick={() => handleDelete(_id)} className="btn">
               Delete
             </button>
