@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../../contexts/AuthProvider/AuthProvider";
 
@@ -17,7 +17,7 @@ const UpdateMyReview = () => {
     const d = new Date();
     var time = d.getTime();
 
-    const order = {
+    const reviewUpdate = {
       // service: _id,
 
       customer: displayName,
@@ -27,28 +27,6 @@ const UpdateMyReview = () => {
       rating,
       time,
     };
-    // console.log(email, message, rating, displayName);
-
-    // fetch("http://localhost:5000/allReviews", {
-    //   method: "POST",
-    //   headers: {
-    //     "content-type": "application/json",
-    //   },
-    //   body: JSON.stringify(order),
-    // })
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     console.log(data);
-
-    //     if (data.acknowledged) {
-    //       alert("Add review successfully");
-    //       // const remaining = reviewsData.filter((rvw) => rvw._id !== _id);
-    //       // const newReviewData = [...reviewsData, remaining];
-    //       // setReviewsData(newReviewData);
-    //       form.reset();
-    //     }
-    //   })
-    //   .catch((er) => console.error(er));
   };
 
   return (

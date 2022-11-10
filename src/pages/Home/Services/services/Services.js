@@ -7,7 +7,7 @@ import ServiceCard from "./ServiceCard";
 const Services = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/books")
+    fetch("https://online-book-shop-server.vercel.app/books")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);

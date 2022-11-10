@@ -8,7 +8,7 @@ const MyReview = () => {
   const { user, logOut } = useContext(AuthContext);
   const [reviews, setReview] = useState([]);
 
-  const url = `http://localhost:5000/allReviews?email=${user?.email}`;
+  const url = `https://online-book-shop-server.vercel.app/allReviews?email=${user?.email}`;
 
   useEffect(() => {
     fetch(url, {
@@ -33,7 +33,7 @@ const MyReview = () => {
       "Are you sure, you want to cancel this order"
     );
     if (proceed) {
-      fetch(`http://localhost:5000/allReviews/${id}`, {
+      fetch(`https://online-book-shop-server.vercel.app/allReviews/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -50,7 +50,7 @@ const MyReview = () => {
   };
 
   const handleStatusUpdate = (id) => {
-    fetch(`http://localhost:5000/allReviews/${id}`, {
+    fetch(`https://online-book-shop-server.vercel.app/allReviews/${id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

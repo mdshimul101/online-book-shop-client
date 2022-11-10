@@ -61,7 +61,9 @@ const router = createBrowserRouter([
         path: "/serviceDetails/:id",
         element: <ServiceDetails></ServiceDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/allBooks/${params.id}`),
+          fetch(
+            `https://online-book-shop-server.vercel.app/allBooks/${params.id}`
+          ),
       },
     ],
   },

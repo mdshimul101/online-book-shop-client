@@ -35,7 +35,7 @@ const ServiceDetails = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/allReviews/${_id}`)
+    fetch(`https://online-book-shop-server.vercel.app/allReviews/${_id}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -68,7 +68,7 @@ const ServiceDetails = () => {
     };
     console.log(email, name, message, rating, price);
 
-    fetch("http://localhost:5000/allReviews", {
+    fetch("https://online-book-shop-server.vercel.app/allReviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",

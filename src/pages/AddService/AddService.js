@@ -40,7 +40,7 @@ const AddService = () => {
       time
     );
 
-    fetch("http://localhost:5000/allBooks", {
+    fetch("https://online-book-shop-server.vercel.app/allBooks", {
       method: "POST",
       headers: {
         "content-type": "application/json",
